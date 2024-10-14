@@ -8,4 +8,6 @@ use (
 	./cards
 	./maps
 	./variadic_functions
+	./interfaces
+	./pointers
 )
