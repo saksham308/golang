@@ -10,4 +10,5 @@ use (
 	./variadic_functions
 	./interfaces
 	./pointers
+	./waitgroups
 )
