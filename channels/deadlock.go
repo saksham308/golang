@@ -53,8 +53,8 @@ func deadlock() {
 // The first 3 tasks will be picked up by the 3 workers. At this point, the main goroutine is blocked because it is sending the 4th task to the tasks channel. However, all 3 workers are busy processing the first 3 tasks, so there is no worker available to pick up the 4th task.
 
 // Deadlock happens here: the main goroutine is blocked trying to send the 4th task, while the workers are blocked trying to send their results to the results channel (because the main goroutine hasn’t started receiving the results yet).
-// Main Goroutine Blocking:
 
+// Main Goroutine Blocking:
 
 // After the main goroutine sends the 3rd task, it immediately tries to send the 4th task. But since all workers are busy processing the first 3 tasks, the main goroutine can’t send the 4th task until one of the workers becomes free.
 
